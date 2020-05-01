@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "cordova-plugin-android-permissions": "1.0.2",
     "cordova-plugin-battery-status": "~1.2.4",
     "cordova-plugin-device": "~1.1.6",
     "cordova-plugin-dialogs": "~1.3.3",
@@ -9,9 +10,7 @@
     "cordova-plugin-inappbrowser": "~1.7.1",
     "cordova-plugin-media-capture": "~1.4.3",
     "cordova-plugin-network-information": "~1.3.3",
-    "cordova-plugin-vibration": "~2.1.5",
-    "cordova-plugin-camera": "4.1.0",
-    "cordova-plugin-android-permissions": "1.0.2"
+    "cordova-plugin-vibration": "~2.1.5"
   },
   "cordova": {
     "plugins": {
@@ -26,7 +25,9 @@
       "cordova-plugin-network-information": {},
       "cordova-plugin-vibration": {},
       "cordova-plugin-android-permissions": {},
-      "cordova-plugin-camera": {}
+      "cordova-plugin-camera": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      }
     },
     "platforms": [
       "android"
@@ -36,7 +37,6 @@
     "cordova-android": "^8.1.0",
     "cordova-browser": "^6.0.0",
     "cordova-plugin-android-permissions": "1.0.2",
-    "cordova-plugin-camera": "4.1.0",
     "ls": "0.2.1"
   }
 }
