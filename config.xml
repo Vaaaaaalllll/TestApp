@@ -117,6 +117,4 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-
-    <engine name="android" spec="https://github.com/apache/cordova-android.git#8.0.0" />
 </widget>
