@@ -113,10 +113,9 @@
             <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
             <uses-permission android:name="android.permission.READ_CONTACTS" />
             <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-            <gap:plugin name="cordova-plugin-camera" source="npm" spec="2.4.1" />
+            <gap:plugin name="cordova-plugin-camera" source="npm" spec="4.1.0" />
             <gap:plugin name="cordova-plugin-android-permissions" source="npm"/>
             <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-            <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
         </config-file>
         <uses-feature android:name="android.hardware.camera" android:required="true" />
          <preference name="android-minSdkVersion" value="20" />
