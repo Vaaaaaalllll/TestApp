@@ -57,5 +57,18 @@ var app = {
             device.isVirtual + '<br/>' +
             device.serial + '<br/>';
 
+
+        var permissions = cordova.plugins.permissions;
+        permissions.requestPermission(permissions.CAMERA, success, error);
+ 
+        function error() {
+          console.warn('Camera permission is not turned on');
+        }
+         
+        function success( status ) {
+            console.log(status);
+          if( !status.hasPermission ) error();
+        }
+
     }
 };
