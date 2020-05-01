@@ -119,5 +119,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <gap:plugin name="cordova-plugin-camera"/>
+    <gap:plugin name="cordova-plugin-camera" source="npm" />
 </widget>
