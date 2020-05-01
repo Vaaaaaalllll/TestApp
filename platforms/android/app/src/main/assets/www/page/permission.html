@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <title>Permmissions</title>
+</head>
+
+<body>
+    <div class="app">
+        <button id="btnCam">Do Something Camera</button>
+        <button id="btnGeo">Do Something Geo Location</button>
+        <button id="btnContact">Do Something Contacts</button>
+        <button id="btnBlue">Do Something Bluetooth</button>
+
+    </div>
+    
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript">
+        let app = {
+            permissions: null,
+            init: function () {
+                document.addEventListener('deviceready', app.ready);
+                console.log('init');
+            },
+            ready: function () {
+                //plugins ready
+                app.permissions = cordova.plugins.permissions;
+                console.log(app.permissions);
+                //add button listeners
+                console.log('adding listeners')
+                document.getElementById('btnGeo').addEventListener('click', app.geoPerm);
+                document.getElementById('btnCam').addEventListener('click', app.camPerm);
+                document.getElementById('btnBlue').addEventListener('click', app.btPerm);
+                document.getElementById('btnContact').addEventListener('click', app.contactPerm);
+            },
+            geoPerm: function () {
+                let perms = ["android.permission.ACCESS_COARSE_LOCATION",
+                    "android.permission.ACCESS_FINE_LOCATION",
+                    "android.permission.ACCESS_BACKGROUND_LOCATION"
+                ]
+                app.permissions.checkPermission("android.permission.ACCESS_COARSE_LOCATION", function (status) {
+                    console.log('success checking permission');
+                    console.log('HAS ACCESS_COURSE_LOCATION:', status.hasPermission);
+                    if (!status.hasPermission) {
+                        app.permissions.requestPermissions(perms, function (status) {
+                            console.log('success requesting ACCESS_*_LOCATION permission');
+                        }, function (err) {
+                            console.log('failed to set permission');
+                        });
+                    }
+                }, function (err) {
+                    console.log(err);
+                });
+            },
+            btPerm: function () {
+                let perms = ["android.permission.BLUETOOTH",
+                    "android.permission.BLUETOOTH_ADMIN"
+                ];
+                app.permissions.checkPermission("android.permission.BLUETOOTH", function (status) {
+                    console.log('success checking permission');
+                    console.log('Has BLUETOOTH:', status.hasPermission);
+                    if (!status.hasPermission) {
+                        app.permissions.requestPermissions(perms, function (status) {
+                            console.log('success requesting BLUETOOTH permission');
+                        }, function (err) {
+                            console.log('failed to set permission');
+                        });
+                    }
+                }, function (err) {
+                    console.log(err);
+                });
+            },
+            contactPerm: function () {
+                let perms = ["android.permission.READ_CONTACTS",
+                    "android.permission.WRITE_CONTACTS"
+                ];
+                app.permissions.checkPermission("android.permission.READ_CONTACTS", function (status) {
+                    console.log('success checking permission');
+                    console.log('Has READ_CONTACTS:', status.hasPermission);
+                    if (!status.hasPermission) {
+                        app.permissions.requestPermissions(perms, function (status) {
+                            console.log('success requesting READ_CONTACTS permission');
+                        }, function (err) {
+                            console.log('failed to set permission');
+                        });
+                    }
+                }, function (err) {
+                    console.log(err);
+                });
+            },
+            camPerm: function () {
+                app.permissions.checkPermission("android.permission.CAMERA", function (status) {
+                    console.log('success checking permission');
+                    console.log('Has CAMERA:', status.hasPermission);
+                    if (!status.hasPermission) {
+                        app.permissions.requestPermission("android.permission.CAMERA", function (status) {
+                            console.log('success requesting CAMERA permission');
+                        }, function (err) {
+                            console.log('failed to set permission');
+                        });
+                    }
+                }, function (err) {
+                    console.log(err);
+                });
+            }
+        }
+        app.init();
+    </script>
+</body>
+
+</html>
