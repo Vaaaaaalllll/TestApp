@@ -116,6 +116,7 @@
             <gap:plugin name="cordova-plugin-camera" source="npm" spec="2.4.1" />
             <gap:plugin name="cordova-plugin-android-permissions" source="npm"/>
             <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
+            <gap:plugin name="cordova-plugin-crosswalk-webview" spec="2.4.0" source="npm" />
         </config-file>
         <uses-feature android:name="android.hardware.camera" android:required="true" />
     </platform>
