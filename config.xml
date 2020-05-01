@@ -119,6 +119,7 @@
             <gap:plugin name="cordova-plugin-crosswalk-webview" spec="2.4.0" source="npm" />
         </config-file>
         <uses-feature android:name="android.hardware.camera" android:required="true" />
+         <preference name="android-minSdkVersion" value="20" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
