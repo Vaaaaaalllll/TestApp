@@ -52,6 +52,7 @@
                         app.permissions.requestPermissions(perms, function (status) {
                             console.log('success requesting ACCESS_*_LOCATION permission');
                         }, function (err) {
+                            console.log(err);
                             console.log('failed to set permission');
                         });
                     }
@@ -70,6 +71,7 @@
                         app.permissions.requestPermissions(perms, function (status) {
                             console.log('success requesting BLUETOOTH permission');
                         }, function (err) {
+                            console.log(err);
                             console.log('failed to set permission');
                         });
                     }
@@ -88,6 +90,7 @@
                         app.permissions.requestPermissions(perms, function (status) {
                             console.log('success requesting READ_CONTACTS permission');
                         }, function (err) {
+                            console.log(err);
                             console.log('failed to set permission');
                         });
                     }
@@ -103,6 +106,7 @@
                         app.permissions.requestPermission("android.permission.CAMERA", function (status) {
                             console.log('success requesting CAMERA permission');
                         }, function (err) {
+                            console.log(err);
                             console.log('failed to set permission');
                         });
                     }
