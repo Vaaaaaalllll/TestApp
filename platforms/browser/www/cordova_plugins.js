@@ -429,7 +429,7 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.3.4",
     "cordova-plugin-vibration": "2.1.6",
     "cordova-plugin-android-permissions": "1.0.2",
-    "cordova-plugin-camera": "4.1.0"
+    "cordova-plugin-camera": "2.4.1"
 }
 // BOTTOM OF METADATA
 });

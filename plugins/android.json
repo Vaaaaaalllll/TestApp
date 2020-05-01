@@ -14,7 +14,6 @@
       "PACKAGE_NAME": "org.testapp.sample"
     },
     "cordova-plugin-camera": {
-      "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "org.testapp.sample"
     },
     "cordova-plugin-device": {
@@ -44,6 +43,9 @@
   },
   "dependent_plugins": {
     "cordova-plugin-file": {
+      "PACKAGE_NAME": "org.testapp.sample"
+    },
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "org.testapp.sample"
     }
   }
