@@ -29,14 +29,12 @@
         "ANDROID_SUPPORT_V4_VERSION": "27.+"
       }
     },
-    "platforms": [
-      "android"
-    ]
+    "platforms": []
   },
   "dependencies": {
-    "cordova-android": "^8.1.0",
     "cordova-browser": "^6.0.0",
     "cordova-plugin-android-permissions": "1.0.2",
-    "ls": "0.2.1"
+    "ls": "0.2.1",
+    "rm": "0.1.8"
   }
 }
