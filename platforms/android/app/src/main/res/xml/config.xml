@@ -88,4 +88,5 @@
     <preference name="LoadingDialog" value="Bitch, Wait for it" />
     <preference name="HideKeyboardFormAccessoryBar" value="true" />
     <preference name="Fullscreen" value="true" />
+    <plugin name="Camera" value="cordova-plugin-camera" />
 </widget>
