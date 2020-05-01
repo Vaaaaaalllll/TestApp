@@ -10,9 +10,6 @@
     "cordova-plugin-battery-status": {
       "PACKAGE_NAME": "org.testapp.sample"
     },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "org.testapp.sample"
-    },
     "cordova-plugin-media-capture": {
       "PACKAGE_NAME": "org.testapp.sample"
     },
@@ -38,6 +35,9 @@
       "PACKAGE_NAME": "org.testapp.sample"
     },
     "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "org.testapp.sample"
+    },
+    "cordova-plugin-camera": {
       "PACKAGE_NAME": "org.testapp.sample"
     }
   },
