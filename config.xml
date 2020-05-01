@@ -115,6 +115,9 @@
             <uses-permission android:name="android.permission.WRITE_CONTACTS" />
             <gap:plugin name="cordova-plugin-camera" source="npm" spec="2.4.1" />
             <gap:plugin name="cordova-plugin-android-permissions" source="npm"/>
+            <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
+
+            <uses-feature android:name="android.hardware.camera" />
         </config-file>
     </platform>
     <platform name="ios">
